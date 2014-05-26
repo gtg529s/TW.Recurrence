@@ -18,7 +18,7 @@ There are several recurrence types namely,
 * WeeklyRecurrence
 * YearlyRecurrence.
 
-However, in the hopes of keeping this this quickstart short and sweet, only DailyRecurrence will be demonstrated here. That said, all of the recurrence types share the same core api so this should go a long way towards teaching you how to use the others as well.
+However, in the interest of keeping this quickstart short and sweet, only DailyRecurrence will be demonstrated here. That said, all of the recurrence types share the same core api so this should go a long way towards teaching you how to use the others as well.
 
 ```C#
 // Part 1: Create A Recurrence
