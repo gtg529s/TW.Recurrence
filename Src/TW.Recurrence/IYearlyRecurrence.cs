@@ -1,4 +1,4 @@
-﻿namespace TW.Platform.UtilityTypes
+﻿namespace TW.Recurrence
 {
     public interface IYearlyRecurrence : IRecurrence
     {

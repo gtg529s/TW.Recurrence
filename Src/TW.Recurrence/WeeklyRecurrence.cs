@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace TW.Platform.UtilityTypes
+namespace TW.Recurrence
 {
     public class WeeklyRecurrence : AbstractRecurrence, IWeeklyRecurrence
     {

@@ -1,4 +1,4 @@
-﻿namespace TW.Platform.UtilityTypes
+﻿namespace TW.Recurrence
 {
     /// <summary>
     ///     A recurrence that occurs daily

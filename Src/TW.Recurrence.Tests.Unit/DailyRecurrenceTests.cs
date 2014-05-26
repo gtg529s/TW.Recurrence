@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TW.Platform.UtilityTypes;
 
-namespace TW.Platform.Tests.Unit.Core.UtilityTypes.Recurrences
+namespace TW.Recurrence.Tests.Unit
 {
     public class DailyRecurrenceTests
     {
@@ -20,7 +19,7 @@ namespace TW.Platform.Tests.Unit.Core.UtilityTypes.Recurrences
 
                 var validStartDateTime = new DateTime(2014, 2, 18);
                 const int validDaysBetweenOccurrences = 3;
-                DateTime validEndDateTime = validStartDateTime.AddDays(9);
+                var validEndDateTime = validStartDateTime.AddDays(validDaysBetweenOccurrences*3);
                 var validDailyRecurrence = new DailyRecurrence(validStartDateTime, validDaysBetweenOccurrences,
                     validEndDateTime);
 
@@ -28,7 +27,7 @@ namespace TW.Platform.Tests.Unit.Core.UtilityTypes.Recurrences
 
                 #region Act
 
-                IEnumerable<DateTime> recurrenceSet = validDailyRecurrence.CalculateRecurrenceSet();
+                var recurrenceSet = validDailyRecurrence.CalculateRecurrenceSet();
 
                 #endregion
 
@@ -54,7 +53,7 @@ namespace TW.Platform.Tests.Unit.Core.UtilityTypes.Recurrences
 
                 var validStartDateTime = new DateTime(2014, 2, 18);
                 const int validDaysBetweenOccurrences = 3;
-                DateTime validEndDateTime = validStartDateTime.AddDays(9);
+                var validEndDateTime = validStartDateTime.AddDays(9);
                 var validDailyRecurrence = new DailyRecurrence(validStartDateTime, validDaysBetweenOccurrences,
                     validEndDateTime);
 
@@ -64,7 +63,7 @@ namespace TW.Platform.Tests.Unit.Core.UtilityTypes.Recurrences
 
                 const int validSkip = 1;
                 const int validTake = 2;
-                IEnumerable<DateTime> recurrenceSet = validDailyRecurrence.CalculateRecurrenceSet(validSkip, validTake);
+                var recurrenceSet = validDailyRecurrence.CalculateRecurrenceSet(validSkip, validTake);
 
                 #endregion
 
@@ -88,7 +87,7 @@ namespace TW.Platform.Tests.Unit.Core.UtilityTypes.Recurrences
 
                 var validStartDateTime = new DateTime(2014, 2, 18);
                 const int validDaysBetweenOccurrences = 3;
-                DateTime validEndDateTime = validStartDateTime.AddDays(9);
+                var validEndDateTime = validStartDateTime.AddDays(9);
                 var validDailyRecurrence = new DailyRecurrence(validStartDateTime, validDaysBetweenOccurrences,
                     validEndDateTime);
 
@@ -99,7 +98,7 @@ namespace TW.Platform.Tests.Unit.Core.UtilityTypes.Recurrences
                 var validDateTimeWindow = new DateTimeWindow(validStartDateTime.AddDays(1),
                     validEndDateTime.Subtract(TimeSpan.FromDays(1)));
 
-                IEnumerable<DateTime> recurrenceSet =
+                var recurrenceSet =
                     validDailyRecurrence.CalculateRecurrenceSet(dateTimeWindow: validDateTimeWindow);
 
                 #endregion
@@ -124,7 +123,7 @@ namespace TW.Platform.Tests.Unit.Core.UtilityTypes.Recurrences
 
                 var validStartDateTime = new DateTime(2014, 2, 18);
                 const int validDaysBetweenOccurrences = 3;
-                DateTime validEndDateTime = validStartDateTime.AddDays(9);
+                var validEndDateTime = validStartDateTime.AddDays(9);
                 var validDailyRecurrence = new DailyRecurrence(validStartDateTime, validDaysBetweenOccurrences,
                     validEndDateTime);
                 validDailyRecurrence.Exclude(validStartDateTime.AddDays(validDaysBetweenOccurrences*2));
@@ -133,7 +132,7 @@ namespace TW.Platform.Tests.Unit.Core.UtilityTypes.Recurrences
 
                 #region Act
 
-                IEnumerable<DateTime> recurrenceSet = validDailyRecurrence.CalculateRecurrenceSet();
+                var recurrenceSet = validDailyRecurrence.CalculateRecurrenceSet();
 
                 #endregion
 

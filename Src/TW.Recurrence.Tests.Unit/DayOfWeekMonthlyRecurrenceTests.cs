@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TW.Platform.UtilityTypes;
+using TW.Recurrence.MonthlyRecurrences;
 
-namespace TW.Platform.Tests.Unit.Core.UtilityTypes.Recurrences
+namespace TW.Recurrence.Tests.Unit
 {
     public class DayOfWeekMonthlyRecurrenceTests
     {

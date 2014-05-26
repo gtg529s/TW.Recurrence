@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Seterlund.CodeGuard;
 
-namespace TW.Platform.UtilityTypes
+namespace TW.Recurrence
 {
     public abstract class AbstractRecurrence : IRecurrence
     {

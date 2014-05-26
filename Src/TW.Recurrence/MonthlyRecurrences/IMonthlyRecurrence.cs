@@ -1,4 +1,4 @@
-﻿namespace TW.Platform.UtilityTypes
+﻿namespace TW.Recurrence.MonthlyRecurrences
 {
     public interface IMonthlyRecurrence : IRecurrence
     {

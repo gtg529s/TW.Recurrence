@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace TW.Platform.UtilityTypes
+namespace TW.Recurrence.MonthlyRecurrences
 {
     public class DayOfMonthMonthlyRecurrence : AbstractMonthlyRecurrence
     {

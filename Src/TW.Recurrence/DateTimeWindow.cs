@@ -1,7 +1,7 @@
 ﻿using System;
 using Seterlund.CodeGuard;
 
-namespace TW.Platform
+namespace TW.Recurrence
 {
     public class DateTimeWindow
     {
