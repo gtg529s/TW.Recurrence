@@ -8,7 +8,7 @@ A library for .Net that makes creating, managing, and working with recurrences e
 The easiest way to install is by using [Nuget](http://nuget.org/packages/TW.Recurrence/)
 
 **Examples:**
-Look at the [Unit Tests(https://github.com/TonightWe/Recurrence/tree/master/Src/TW.Recurrence.Tests.Unit)] for example usage of all recurrence types
+Look at the [Unit Tests](https://github.com/TonightWe/Recurrence/tree/master/Src/TW.Recurrence.Tests.Unit) for example usage of all recurrence types
 
 **Quickstart:**
 There are several recurrence types namely,
