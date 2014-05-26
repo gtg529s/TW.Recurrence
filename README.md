@@ -11,15 +11,16 @@ The easiest way to install is by using [Nuget](http://nuget.org/packages/TW.Recu
 Documentation is available via the [Wiki](https://github.com/TonightWe/Recurrence/wiki)
 
 **Quickstart:**
+There are several recurrence types namely,
+* DailyRecurrence
+* DayOfMonthMonthlyRecurrence
+* DayOfWeekMonthlyRecurrence
+* WeeklyRecurrence
+* YearlyRecurrence.
+
+However, in the hopes of keeping this this quickstart short and sweet, only DailyRecurrence will be included in the quickstart. That said, all of the recurrence types share the same core api so this should get you well on your way to using them all.
 
 ```C#
-// Note: there are several recurrence types namely, 
-// DailyRecurrence, DayOfMonthMonthlyRecurrence, DayOfWeekMonthlyRecurrence,
-// WeeklyRecurrence,and YearlyRecurrence.In the hopes of keeping this this
-// quickstart short and sweet, only DailyRecurrence will be demonstrated here.
-// It should be noted however that the other recurrences all share the same
-// core functionality demonstrated here.
-
 // Part 1: Create A Recurrence
 var startDateTime = DateTime.UtcNow;
 var daysBetweenOccurrences = 3;
