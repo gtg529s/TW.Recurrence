@@ -1,9 +1,3 @@
-Recurrence
-==========
-
-**Description**
-A library for .Net that makes creating, managing, and working with recurrences easy
-
 **Installation:**
 The easiest way to install is by using [Nuget](http://nuget.org/packages/TW.Recurrence/)
 
