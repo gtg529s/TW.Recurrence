@@ -5,7 +5,7 @@ The easiest way to install is by using [NuGet](http://nuget.org/packages/TW.Recu
 see the [wiki](https://github.com/TonightWe/TW.Recurrence/wiki) for available documentation.
 
 **Examples:**
-Look at the [Unit Tests](https://github.com/TonightWe/TW.Recurrence/tree/master/Src/TW.Recurrence.Tests.Unit) for example usage of all recurrence types
+Look at the [unit tests](https://github.com/TonightWe/TW.Recurrence/tree/master/Src/TW.Recurrence.Tests.Unit) for example usage of all recurrence types
 
 **Getting Started:** 
 see the [Quickstart](https://github.com/TonightWe/TW.Recurrence/wiki/Quickstart) to get started.
