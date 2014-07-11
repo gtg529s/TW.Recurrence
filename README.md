@@ -8,7 +8,7 @@ see the [wiki](https://github.com/TonightWe/TW.Recurrence/wiki) for available do
 Look at the [unit tests](https://github.com/TonightWe/TW.Recurrence/tree/master/Src/TW.Recurrence.Tests.Unit) for example usage of all recurrence types
 
 **Getting Started:** 
-see the [Quickstart](https://github.com/TonightWe/TW.Recurrence/wiki/Quickstart) to get started.
+see the [quickstart](https://github.com/TonightWe/TW.Recurrence/wiki/Quickstart) to get started.
 
 **Build Status:**
 ![Unknown](https://ci.appveyor.com/api/projects/status/t6p09qaam76us0nh)
