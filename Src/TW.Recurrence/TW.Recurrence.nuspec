@@ -10,7 +10,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
     <tags>Recurring Recurrence CalendarRecurrence RecurrenceFormula RecurrenceSet Set Calendar Occurs Occurrence Reoccur Recur</tags>
-    <projectUrl>https://github.com/TonightWe/Recurrence</projectUrl>
+    <projectUrl>https://github.com/TonightWe/Tw.Recurrence</projectUrl>
   </metadata>
   <files />
 </package>
