@@ -52,6 +52,49 @@ namespace TW.Recurrence.Tests.Unit
             }
 
             [TestMethod]
+            public void CanCalculateRecurrenceSetEveryMonthSpanYear()
+            {
+                #region Arrange
+
+                var validStartDateTime = new DateTime(2014, 1, 31);
+                const int validMonthsBetweenOccurrences = 1;
+                DateTime validEndDateTime = validStartDateTime.AddMonths(12);
+                var validDayOfWeekMonthlyRecurrence = new DayOfWeekMonthlyRecurrence(validStartDateTime,
+                    validMonthsBetweenOccurrences, validEndDateTime);
+
+                var expectedRecurrenceSet = new List<DateTime>
+                {
+                    new DateTime(2014, 1, 31), // 1/31/2014 (January)
+                    new DateTime(2014, 2, 28), // 2/28/2014 (Feb)
+                    new DateTime(2014, 3, 28), // 3/28/2014 (March)
+                    new DateTime(2014, 4, 25), // 4/25/2014 (April)
+                    new DateTime(2014, 5, 30), // 5/30/2014 (May)
+                    new DateTime(2014, 6, 27), // 6/27/2014 (June)
+                    new DateTime(2014, 7, 25), // 7/25/2014 (July)
+                    new DateTime(2014, 8, 29), // 8/29/2014 (August)
+                    new DateTime(2014, 9, 26), // 9/26/2014 (September)
+                    new DateTime(2014, 10, 31), // 10/31/2014 (September)
+                    new DateTime(2014, 11, 28), // 11/28/2014 (November)
+                    new DateTime(2014, 12, 26), // 12/26/2014 (December)
+                    new DateTime(2015, 1, 30) // 1/30/2015 (January)
+                };
+
+                #endregion
+
+                #region Act
+
+                IEnumerable<DateTime> recurrenceSet = validDayOfWeekMonthlyRecurrence.CalculateRecurrenceSet();
+
+                #endregion
+
+                #region Assert
+
+                Assert.IsTrue(expectedRecurrenceSet.SequenceEqual(recurrenceSet));
+
+                #endregion
+            }
+
+            [TestMethod]
             public void CalculatedRecurrenceSetPagingWorks()
             {
                 #region Arrange

@@ -50,7 +50,7 @@ namespace TW.Recurrence.Tests.Unit
             }
 
             [TestMethod]
-            public void CanCalculateRecurrenceSet_2()
+            public void CanCalculateRecurrenceSetEveryMonthSpanYear()
             {
                 #region Arrange
 
