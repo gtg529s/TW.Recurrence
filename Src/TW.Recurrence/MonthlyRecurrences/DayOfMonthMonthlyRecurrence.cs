@@ -22,19 +22,20 @@ namespace TW.Recurrence.MonthlyRecurrences
 
         public override DateTime GetDateTimeOfNextOccurrenceCandidate(DateTime precedingDateTime)
         {
+            //get the next occurance by adding the months between
+            precedingDateTime = precedingDateTime.AddMonths(MonthsBetweenOccurrences);
+
             int testYear = precedingDateTime.Year;
             int testMonth = precedingDateTime.Month;
-            AddMonthsBetweenOccurrences(ref testYear, ref testMonth);
 
-
-            while (DateTime.DaysInMonth(testYear, testMonth) < precedingDateTime.Day)
+            //If the next month doesn't contain the day we're recurring on, then skip it
+            while (DateTime.DaysInMonth(testYear, testMonth) < StartDateTime.Day)
             {
-                AddMonthsBetweenOccurrences(ref testYear, ref testMonth);
+                precedingDateTime = precedingDateTime.AddMonths(MonthsBetweenOccurrences);
+                testYear = precedingDateTime.Year;
+                testMonth = precedingDateTime.Month;
             }
-
-            return
-                precedingDateTime.AddYears(testYear - precedingDateTime.Year)
-                    .AddMonths(Math.Abs(testMonth - precedingDateTime.Month));
+            return new DateTime(precedingDateTime.Year, precedingDateTime.Month, StartDateTime.Day);
         }
 
         #endregion

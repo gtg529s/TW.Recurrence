@@ -20,7 +20,7 @@ namespace TW.Recurrence.Tests.Unit
 
                 var validStartDateTime = new DateTime(2014, 1, 31);
                 const int validMonthsBetweenOccurrences = 2;
-                DateTime validEndDateTime = validStartDateTime.AddMonths(9);
+                DateTime validEndDateTime = validStartDateTime.AddMonths(12);
                 var validDayOfMonthMonthlyRecurrence = new DayOfMonthMonthlyRecurrence(validStartDateTime,
                     validMonthsBetweenOccurrences, validEndDateTime);
 
@@ -29,7 +29,52 @@ namespace TW.Recurrence.Tests.Unit
                     validStartDateTime, // 1/31/2014 (January)
                     validStartDateTime.AddMonths(2), // 3/31/2014 (March)
                     validStartDateTime.AddMonths(4), // 5/31/2014 (May)
-                    validStartDateTime.AddMonths(6) // 7/31/2014 (July)
+                    validStartDateTime.AddMonths(6), // 7/31/2014 (July)
+                    validStartDateTime.AddMonths(12) // 1/31/2015 (Jan)
+                    // no 9/31/2014 (September) because September only has 30 days so its skipped
+                };
+
+                #endregion
+
+                #region Act
+
+                IEnumerable<DateTime> recurrenceSet = validDayOfMonthMonthlyRecurrence.CalculateRecurrenceSet();
+
+                #endregion
+
+                #region Assert
+
+                Assert.IsTrue(expectedRecurrenceSet.SequenceEqual(recurrenceSet));
+
+                #endregion
+            }
+
+            [TestMethod]
+            public void CanCalculateRecurrenceSet_2()
+            {
+                #region Arrange
+
+                var validStartDateTime = new DateTime(2014, 1, 15);
+                const int validMonthsBetweenOccurrences = 1;
+                DateTime validEndDateTime = validStartDateTime.AddMonths(12);
+                var validDayOfMonthMonthlyRecurrence = new DayOfMonthMonthlyRecurrence(validStartDateTime,
+                    validMonthsBetweenOccurrences, validEndDateTime);
+
+                var expectedRecurrenceSet = new List<DateTime>
+                {
+                    validStartDateTime, // 1/31/2014 (January)
+                    validStartDateTime.AddMonths(1), // 3/31/2014 (March)
+                    validStartDateTime.AddMonths(2), // 5/31/2014 (May)
+                    validStartDateTime.AddMonths(3), // 7/31/2014 (July)
+                    validStartDateTime.AddMonths(4), // 1/31/2015 (Jan)
+                    validStartDateTime.AddMonths(5), // 3/31/2014 (March)
+                    validStartDateTime.AddMonths(6), // 5/31/2014 (May)
+                    validStartDateTime.AddMonths(7), // 7/31/2014 (July)
+                    validStartDateTime.AddMonths(8), // 1/31/2015 (Jan)
+                    validStartDateTime.AddMonths(9), // 3/31/2014 (March)
+                    validStartDateTime.AddMonths(10), // 5/31/2014 (May)
+                    validStartDateTime.AddMonths(11), // 7/31/2014 (July)
+                    validStartDateTime.AddMonths(12) // 1/31/2015 (Jan)
                     // no 9/31/2014 (September) because September only has 30 days so its skipped
                 };
 
@@ -98,7 +143,7 @@ namespace TW.Recurrence.Tests.Unit
                 {
                     validStartDateTime.AddMonths(2), // 3/31/2014 (March)
                     validStartDateTime.AddMonths(4), // 5/31/2014 (May)
-                    validStartDateTime.AddMonths(6) // 7/31/2014 (July)
+                    validStartDateTime.AddMonths(6), // 7/31/2014 (July)
                 };
 
                 #endregion
@@ -137,7 +182,7 @@ namespace TW.Recurrence.Tests.Unit
                 {
                     validStartDateTime, // 1/31/2014 (January)
                     validStartDateTime.AddMonths(4), // 5/31/2014 (May)
-                    validStartDateTime.AddMonths(6) // 7/31/2014 (July)
+                    validStartDateTime.AddMonths(6), // 7/31/2014 (July)
                 };
 
                 #endregion

@@ -20,7 +20,7 @@ namespace TW.Recurrence.Tests.Unit
 
                 var validStartDateTime = new DateTime(2014, 1, 31);
                 const int validMonthsBetweenOccurrences = 2;
-                DateTime validEndDateTime = validStartDateTime.AddMonths(9);
+                DateTime validEndDateTime = validStartDateTime.AddMonths(14);
                 var validDayOfWeekMonthlyRecurrence = new DayOfWeekMonthlyRecurrence(validStartDateTime,
                     validMonthsBetweenOccurrences, validEndDateTime);
 
@@ -30,7 +30,10 @@ namespace TW.Recurrence.Tests.Unit
                     new DateTime(2014, 3, 28), // 3/28/2014 (March)
                     new DateTime(2014, 5, 30), // 5/30/2014 (May)
                     new DateTime(2014, 7, 25), // 7/25/2014 (July)
-                    new DateTime(2014, 9, 26) // 9/26/2014 (September)
+                    new DateTime(2014, 9, 26), // 9/26/2014 (September)
+                    new DateTime(2014, 11, 28), // 11/28/2014 (November)
+                    new DateTime(2015, 1, 30), // 1/30/2015 (January)
+                    new DateTime(2015, 3, 27) // 3/27/2015 (March)
                 };
 
                 #endregion
